@@ -1,0 +1,11 @@
+sudo: required
+language: generic
+
+services:
+  - docker
+
+before_install:
+  - docker build -t olecam/docker-react -d Dockerfile.dev .
+
+script:
+  - docker run -e CI=true 547df84e332b npm run test
