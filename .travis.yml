@@ -8,4 +8,4 @@ before_install:
   - docker build -t olecam/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true 547df84e332b npm run test
+  - docker run -e CI=true olecam/docker-react npm run test
